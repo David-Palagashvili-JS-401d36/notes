@@ -1,0 +1,24 @@
+{
+  "name": "notes",
+  "version": "1.0.0",
+  "description": "Notesy, a terminal based (CLI) application allowing users to easily create and manage a list of categorized notes!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/David-Palagashvili-JS-401d36/notes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/David-Palagashvili-JS-401d36/notes/issues"
+  },
+  "homepage": "https://github.com/David-Palagashvili-JS-401d36/notes#readme",
+  "dependencies": {
+    "minimist": "^1.2.5"
+  },
+  "devDependencies": {}
+}
