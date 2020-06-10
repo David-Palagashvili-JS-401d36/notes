@@ -1,34 +1,22 @@
 'use strict';
 
-/**
- * Simple Server
- * @module index
- */
+// Require the library files we will be writing.
+const Input = require('./lib/input');
+const Note = require('./lib/notes');
+
+// Instantiate an instance of the “Input” parser module.
+const parsed = new Input();
 
 
-const express = require('express');
-
-const pol = require('./pol.js');
-
-const app = express();
-
-app.use('/docs', express.static('./docs'));
-
-/**
- * / Request Handler (All Routes)
- * @param req
- * @param res
- */
-
-app.get('/', requestHandler);
-
-function requestHandler(req,res) {
-  res.setHeader('Content-Type', 'text/html');
-  res.statusCode = 200;
-  let isItAlive = pol.isAlive(req.query.dead).toString();
-  res.write( isItAlive );
-  res.end();
+//TODO: Pass the command to the Notes library, which executes the command.
+function fetch(parsed) {
+    if (parsed.action === false) {
+        console.log('Something went wrong with your action, try again!')
+    } else {
+        console.log(`Successfully added note: ${parsed.payload}`);
+    }
 }
+fetch(parsed);
 
-app.listen(process.env.PORT, () => console.log('server up') );
-
+let userNote = new Note(parsed);
+console.log(userNote);
