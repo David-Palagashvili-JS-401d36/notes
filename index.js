@@ -1,34 +1,10 @@
 'use strict';
 
-/**
- * Simple Server
- * @module index
- */
+//TODO: Require the library files you will be writing (input, notes).
+const Input = require('./lib/input');
+const Note = require('./lib/notes');
 
+//TODO: Instantiate an instance of an “Input” parser module
+const options = new Input();
 
-const express = require('express');
-
-const pol = require('./pol.js');
-
-const app = express();
-
-app.use('/docs', express.static('./docs'));
-
-/**
- * / Request Handler (All Routes)
- * @param req
- * @param res
- */
-
-app.get('/', requestHandler);
-
-function requestHandler(req,res) {
-  res.setHeader('Content-Type', 'text/html');
-  res.statusCode = 200;
-  let isItAlive = pol.isAlive(req.query.dead).toString();
-  res.write( isItAlive );
-  res.end();
-}
-
-app.listen(process.env.PORT, () => console.log('server up') );
-
+//TODO: Pass the command to the Notes library, which executes the command.
