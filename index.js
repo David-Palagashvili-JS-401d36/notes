@@ -15,7 +15,7 @@ function fetch(parsed) {
     } else {
         console.log(`Successfully added note: ${parsed.payload}`);
     }
-}
+};
 fetch(parsed);
 
 let userNote = new Note(parsed);
