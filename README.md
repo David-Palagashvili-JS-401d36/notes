@@ -22,9 +22,9 @@ i.e.
 - `PORT` - Port Number
 - `MONGODB_URI` - URL to the running mongo instance/db
 
-#### How to initialize/run your application (where applicable)
+#### Initialization (running the app)
 
-- e.g. `npm start`
+So far, options include: -a , --add
 
 #### How to use your library (where applicable)
 
@@ -36,4 +36,3 @@ i.e.
 
 #### UML
 
-Link to an image of the UML for your application and response to events
