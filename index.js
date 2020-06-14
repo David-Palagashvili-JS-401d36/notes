@@ -10,10 +10,10 @@ const parsed = new Input();
 
 //TODO: Pass the command to the Notes library, which executes the command.
 function fetch(parsed) {
-    if (parsed.action === false) {
+    if (parsed.command === false) {
         console.log('Something went wrong with your action, try again!')
     } else {
-        console.log(`Successfully added note: ${parsed.payload}`);
+        console.log(`Successfully added note: ${parsed.command}`);
     }
 };
 fetch(parsed);
