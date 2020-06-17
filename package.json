@@ -18,8 +18,9 @@
   },
   "homepage": "https://github.com/David-Palagashvili-JS-401d36/notes#readme",
   "dependencies": {
-    "minimist": "^1.2.5",
     "dotenv": "^8.2.0",
+    "minimist": "^1.2.5",
+    "mongodb": "^3.5.9",
     "mongoose": "^5.9.18"
   },
   "devDependencies": {

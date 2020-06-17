@@ -4,6 +4,7 @@
 
 // Require the environment configs.
 require('dotenv').config();
+
 //Node Modules
 const Input = require('./lib/input');
 const Note = require('./lib/notes');
@@ -16,6 +17,7 @@ mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
+
 const mongoDB = mongoose.connection; //default connection of mongoose module
 mongoDB.on('open', () => {
     console.log('mongoDB is now connected');
